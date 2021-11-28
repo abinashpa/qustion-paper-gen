@@ -40,11 +40,11 @@ cd qustion-paper-gen
 node main
 ````
 
-5. Result format.
+5. Result format (in arrays questions will be stored).
 ```json
 {
-  easy: [questions],
-  medium: [questions],
-  hard: [questions]
+  easy: [],
+  medium: [],
+  hard: []
 }
 ```
