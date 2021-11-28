@@ -43,8 +43,8 @@ node main
 5. Result format (in arrays questions will be stored).
 ```json
 {
-  easy: [],
-  medium: [],
-  hard: []
+  "easy": [],
+  "medium": [],
+  "hard": []
 }
 ```
