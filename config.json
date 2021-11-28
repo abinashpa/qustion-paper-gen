@@ -1,0 +1,9 @@
+{
+  "totalMarks": 100,
+  "difficulty": {
+    "easy": 20,
+    "medium": 50,
+    "hard": 30
+  },
+  "filePath": "./question-store.json"
+}

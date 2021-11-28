@@ -1,8 +1,22 @@
-const Question = require("./question");
+const fs = require("fs/promises");
+const QuestionStore = require("./QuestionStore");
+const QuestionPaper = require("./QuestionPaper");
 
 async function main() {
-	const paper1 = new Question("./question-store.json");
-	await paper1.readQuestionStore();
+	const configFile = await fs.readFile("config.json");
+	const parsedConfigFile = JSON.parse(configFile);
+
+	const questionStore = new QuestionStore(parsedConfigFile.filePath);
+	await questionStore.readData();
+	
+	const questionPaper = new QuestionPaper(
+		parsedConfigFile.totalMarks,
+		questionStore.list,
+		parsedConfigFile.difficulty
+	);
+	questionPaper.check();
+	questionPaper.make();
+	questionPaper.print();
 }
 
 main().catch(console.error);
