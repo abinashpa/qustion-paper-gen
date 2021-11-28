@@ -14,8 +14,8 @@ git clone https://github.com/Abinash393/qustion-paper-gen.git
 
 2. Add questions inside data object in question-store.json file. \
 Ex: 
+// Question Subject Topic Difficulty Marks
 ```json
-// Question                     Subject   Topic Difficulty  Marks
 ["What is the speed of light", "Physics", "Waves", "Easy", 5]
 ```
 
